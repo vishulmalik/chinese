@@ -30,5 +30,5 @@ const MainMenu = () => {
   )
 }
 
-export default Menu
+export default MainMenu
 

@@ -17,7 +17,7 @@ const BlogIndex = ({
       <Layout isHomePage>
         <Seo title="All posts" />
         <Bio />
-<Menu/>
+<MainMenu/>
         <p>
           No blog posts found. Add posts to your WordPress site and they'll
           appear here!
@@ -32,7 +32,7 @@ const BlogIndex = ({
       <Seo title="All posts" />
 
       <Bio />
-<Menu/>
+<MainMenu/>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.title
