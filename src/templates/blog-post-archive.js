@@ -5,7 +5,7 @@ import parse from "html-react-parser"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Menu from "../components/menu"
+import MainMenu from "../components/menu"
 const BlogIndex = ({
   data,
   pageContext: { nextPagePath, previousPagePath },
