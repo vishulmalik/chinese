@@ -5,7 +5,7 @@ import parse from "html-react-parser"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import MainMenu from "../components/menu"
+import tree from "../components/menu"
 const BlogIndex = ({
   data,
   pageContext: { nextPagePath, previousPagePath },
@@ -29,7 +29,7 @@ const BlogIndex = ({
   return (
     <Layout isHomePage>
 $hierarchicalList = flatListToHierarchical(data.allWpMenuItem.nodes)
-
+<tree />
       <Seo title="All posts" />
 
       <Bio />
