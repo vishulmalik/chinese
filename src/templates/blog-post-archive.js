@@ -17,7 +17,6 @@ const BlogIndex = ({
       <Layout isHomePage>
         <Seo title="All posts" />
         <Bio />
-<MainMenu/>
         <p>
           No blog posts found. Add posts to your WordPress site and they'll
           appear here!
@@ -29,10 +28,11 @@ const BlogIndex = ({
 
   return (
     <Layout isHomePage>
+$hierarchicalList = flatListToHierarchical(data.allWpMenuItem.nodes)
+
       <Seo title="All posts" />
 
       <Bio />
-<MainMenu/>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.title
