@@ -28,7 +28,7 @@ const BlogIndex = ({
 
   return (
     <Layout isHomePage>
-$hierarchicalList = flatListToHierarchical(data.allWpMenuItem.nodes)
+$hierarchicalList = flatListToHierarchical(data.menus.nodes)
 <tree />
       <Seo title="All posts" />
 
