@@ -5,7 +5,6 @@ import parse from "html-react-parser"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import tree from "../components/menu"
 const BlogIndex = ({
   data,
   pageContext: { nextPagePath, previousPagePath },
@@ -28,8 +27,7 @@ const BlogIndex = ({
 
   return (
     <Layout isHomePage>
-const hierarchicalList = flatListToHierarchical(data.nodes);
-<nav> flatListToHierarchical( data.nodes )</nav>
+
       <Seo title="All posts" />
 
       <Bio />

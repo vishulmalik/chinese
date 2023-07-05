@@ -14,10 +14,19 @@ const Layout = ({ isHomePage, children }) => {
           title
           description
         }
+menu(id: "dGVybToxOA==") {
+    menuItems {
+      nodes {
+        id
+        url
+        label
+      }
+    }
+  }
       }
     }
   `)
-
+const items =data.menu.menuItems.nodes
   return (
     <div className="global-wrapper" data-is-root-path={isHomePage}>
       <header className="global-header">
@@ -29,9 +38,13 @@ const Layout = ({ isHomePage, children }) => {
           <Link className="header-link-home" to="/">
             {title}
           </Link>
+{items.map(item =>(
+<link classname="menu-item"> to={item.url} key={item.id}>
+{item.label}
+</link>
+))
         )}
       </header>
-
       <main>{children}</main>
 
       <footer>
