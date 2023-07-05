@@ -28,8 +28,8 @@ const BlogIndex = ({
 
   return (
     <Layout isHomePage>
-const hierarchicalList = flatListToHierarchical(data.menus.nodes)
-<tree {hierarchicalList}/>
+const hierarchicalList = data.menus.nodes
+<nav> {hierarchicalList}</nav>
       <Seo title="All posts" />
 
       <Bio />
