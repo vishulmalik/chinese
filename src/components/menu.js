@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
 
-const Menu = () => {
+const HeaderMenu = () => {
 const { data } = useStaticQuery(graphql`
     query MenuQuery {
   wpMenu(locations: { eq: GATSBY_HEADER_MENU }) {
@@ -21,13 +21,7 @@ const items = data.wpMenu.menuItems.nodes
 
   return (
 <nav>
-{items.map(item =>(
-
-<link to={item.url} key={itme.id}>
-{item.label}
-</link>
-))
-
+{items}
 </nav>
  )
 }
