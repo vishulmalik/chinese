@@ -17,20 +17,6 @@ const Layout = ({ isHomePage, children }) => {
 }
 }
 `)
- = useStaticQuery (graphql` 
-query {
-menu(id: "dGVybToxOA==") {
-    menuItems {
-      nodes {
-        id
-        url
-        label
-      }
-    }
-  }
-}      
-  `)
-const items =data.menu.menuItems.nodes
   return (
     <div className="global-wrapper" data-is-root-path={isHomePage}>
       <header className="global-header">
@@ -42,11 +28,7 @@ const items =data.menu.menuItems.nodes
           <Link className="header-link-home" to="/">
             {title}
           </Link>
-{items.map(item =>(
-<link classname="menu-item"> to={item.url} key={item.id}>
-{item.label}
-</link>
-))
+<link classname="menu-item" to="#">HomePage</link>
         )}
       </header>
       <main>{children}</main>
