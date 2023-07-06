@@ -14,9 +14,6 @@ const Layout = ({ isHomePage, children }) => {
           title
           description
         }
-}
-}
-query {
 menu(id: "dGVybToxOA==") {
     menuItems {
       nodes {
@@ -25,8 +22,9 @@ menu(id: "dGVybToxOA==") {
         label
       }
     }
-}
   }
+}
+}
       
   `)
 const items =data.menu.menuItems.nodes
