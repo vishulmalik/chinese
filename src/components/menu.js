@@ -21,7 +21,13 @@ const { data } = useStaticQuery(graphql`
 
   return (
 <nav>
-{data.wpMenu.menuItems.nodes}
+{items.map(item =>(
+
+<link to={item.url} key={itme.id}>
+{item.label}
+</link>
+))
+
 </nav>
  )
 }
