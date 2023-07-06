@@ -17,7 +17,7 @@ const { data } = useStaticQuery(graphql`
 `)
 
 
-
+const items = data.wpMenu.menuItems.nodes
 
   return (
 <nav>
