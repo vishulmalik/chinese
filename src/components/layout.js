@@ -28,7 +28,6 @@ const Layout = ({ isHomePage, children }) => {
           <Link className="header-link-home" to="/">
             {title}
           </Link>
-<link classname="menu-item" to="#">HomePage</link>
         )}
       </header>
       <main>{children}</main>
