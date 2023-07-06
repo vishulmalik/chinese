@@ -15,6 +15,8 @@ const Layout = ({ isHomePage, children }) => {
           description
         }
 }
+}
+query {
 menu(id: "dGVybToxOA==") {
     menuItems {
       nodes {
@@ -23,9 +25,9 @@ menu(id: "dGVybToxOA==") {
         label
       }
     }
+}
   }
       
-    }
   `)
 const items =data.menu.menuItems.nodes
   return (
