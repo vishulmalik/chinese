@@ -14,7 +14,11 @@ const Layout = ({ isHomePage, children }) => {
           title
           description
         }
-menu(id: "dGVybToxOA==") {
+}
+}
+`)
+ = useStaticQuery (graphql` 
+query menu(id: "dGVybToxOA==") {
     menuItems {
       nodes {
         id
@@ -23,8 +27,6 @@ menu(id: "dGVybToxOA==") {
       }
     }
   }
-}
-}
       
   `)
 const items =data.menu.menuItems.nodes
