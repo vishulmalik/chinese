@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import parse from "html-react-parser"
+import HeaderMenu from "menu"
 
 const Layout = ({ isHomePage, children }) => {
   const {
@@ -30,7 +31,8 @@ const Layout = ({ isHomePage, children }) => {
           </Link>
         )}
       </header>
-      <main>{children}</main>
+<HeaderMenu />      
+<main>{children}</main>
 
       <footer>
         © {new Date().getFullYear()}, Built with
