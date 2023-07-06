@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 const Menu = () => {
 const { data } = useStaticQuery(graphql`
     query MenuQuery {
-wpMenu(id: "dGVybToxOA==") {
+  wpMenu(locations: { eq: GATSBY_HEADER_MENU }) {
     menuItems {
       nodes {
         id
