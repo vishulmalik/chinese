@@ -31,8 +31,7 @@ const BlogIndex = ({
     <Layout isHomePage>
 
       <Seo title="All posts" />
-const hierarchicalList = flatListToHierarchical(data.allWpMenuItem.nodes)
-{hierarchicalList}
+console.log(data)
       <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
