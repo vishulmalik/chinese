@@ -4,20 +4,20 @@ import { useStaticQuery, graphql } from "gatsby"
 const HeaderMenu = () => {
 const { data } = useStaticQuery(graphql`
     query MenuQuery {
-  wpMenu(locations: { eq: GATSBY_HEADER_MENU }) {
-    menuItems {
-      nodes {
-        id
-        url
-        label
-      }
+allWpMenuItem(filter: { locations: { eq: GATSBY_HEADER_MENU } }) {
+    nodes {
+      id
+      label
+      title
+      path
+      parentId
     }
   }
 }
 `)
 
 
-const items = data.wpMenu.menuItems.nodes
+const items = data.allWpMenuItem.nodes
 
   return (
 <nav>
