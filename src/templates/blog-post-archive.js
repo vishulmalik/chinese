@@ -31,7 +31,7 @@ const BlogIndex = ({
     <Layout isHomePage>
 
       <Seo title="All posts" />
-<HeaderMenu />
+      <HeaderMenu />
       <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
