@@ -1,20 +1,28 @@
 import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
 
-const flatListToHierarchical = (
-  data = [],
-  { idKey = "id", parentKey = "parentId", childrenKey = "children" } = {}
-) => {
-  const tree = []
-  const childrenOf = {}
-  data.forEach(item => {
-    const newItem = { ...item }
-    const { [idKey]: id, [parentKey]: parentId = 0 } = newItem
-    childrenOf[id] = childrenOf[id] || []
-    newItem[childrenKey] = childrenOf[id]
-    parentId
-      ? (childrenOf[parentId] = childrenOf[parentId] || []).push(newItem)
-      : tree.push(newItem)
-  })
-  return tree
+const HeaderMenu = () => {
+const { data } = useStaticQuery(graphql`
+    query {
+allWpMenuItem(filter: { locations: { eq: GATSBY_HEADER_MENU } }) {
+    nodes {
+      id
+      label
+      title
+      path
+      parentId
+    }
+  }
 }
+`)
+
+
+const items = data.allWpMenuItem.nodes 
+  return (
+<nav>
+
+</nav>
+ )
+}
+export default HeaderMenu
+
